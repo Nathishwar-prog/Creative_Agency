@@ -1,0 +1,438 @@
+[
+    {
+        "title": "Web Development Designs",
+        "gradient": "linear-gradient(135deg, #e73827, #f85032)",
+        "projects": [
+            {
+                "id": "b1",
+                "image": "/images/web/design1.png",
+                "title": "Lumnia Identity",
+                "link": "https://lumnia.com",
+                "tagline": "Illuminating brand presence through digital innovation.",
+                "description": "A comprehensive digital rebranding for Lumnia, focusing on light-inspired aesthetics and seamless user interaction.",
+                "problem": "Lumnia's legacy web presence failed to communicate their core value proposition: clarity and speed. They needed a site that felt instantaneous and radiant.",
+                "solution": "We engineered a static-first Next.js architecture with WebGL lighting effects that react to user cursors, symbolizing the company's focus on illumination.",
+                "technologies": [
+                    "Next.js",
+                    "Three.js",
+                    "Tailwind CSS",
+                    "Framer Motion"
+                ],
+                "features": [
+                    "Real-time lighting engine",
+                    "CMS integration",
+                    "0.1s load times"
+                ]
+            },
+            {
+                "id": "b2",
+                "image": "/images/web/design2.png",
+                "title": "Prism Collective",
+                "link": "https://prismcollective.com",
+                "tagline": "Refracting creativity into digital spectrums.",
+                "description": "An artist portfolio community platform designed to showcase diverse creative works in a unified grid system.",
+                "problem": "Artists struggled to display mixed-media portfolios (video, 3D, image) in a coherent way without sacrificing load speed.",
+                "solution": "We built a custom masonry grid handler that dynamically optimizes geometry based on asset aspect ratios, ensuring a perfect visual fit for every piece.",
+                "technologies": [
+                    "React",
+                    "Typescript",
+                    "Cloudinary API",
+                    "Masonry"
+                ],
+                "features": [
+                    "Dynamic masonry grid",
+                    "Asset optimization",
+                    "Social sharing"
+                ]
+            },
+            {
+                "id": "b3",
+                "image": "/images/web/design3.png",
+                "title": "Vertex Studio",
+                "link": "https://vertexstudio.com",
+                "tagline": "The peak of architectural visualization.",
+                "description": "A minimalist showcase for an architectural firm, emphasizing space, typography, and large-scale imagery.",
+                "problem": "Vertex needed to display high-resolution architectural renders without overwhelming the browser or the user's data connection.",
+                "solution": "Implemented a progressive image loading strategy with LQIP (Low Quality Image Placeholders) and hardware-accelerated transitions.",
+                "technologies": [
+                    "Vue.js",
+                    "Nuxt",
+                    "WebGL",
+                    "GSAP"
+                ],
+                "features": [
+                    "Progressive loading",
+                    "Smooth scrolling",
+                    "Minimalist UI"
+                ]
+            },
+            {
+                "id": "b4",
+                "image": "/images/web/design4.png",
+                "title": "Aura Branding",
+                "link": "https://aurabranding.com",
+                "tagline": "Atmospheric digital experiences.",
+                "description": "A corporate site that breaks the mold with fluid gradients and glassmorphism.",
+                "problem": "Corporate branding often feels sterile. Aura wanted to convey warmth and fluidity while remaining professional.",
+                "solution": "Utilized CSS-only mesh gradients and backdrop-filter effects to create a 'living' background that shifts subtly over time.",
+                "technologies": [
+                    "HTML5",
+                    "SCSS",
+                    "Vanilla JS",
+                    "Canvas"
+                ],
+                "features": [
+                    "Fluid gradients",
+                    "Glassmorphism",
+                    "Accessible contrast"
+                ]
+            },
+            {
+                "id": "b5",
+                "image": "/images/web/design5.png",
+                "title": "Zephyr Lab",
+                "link": "https://zephyrlab.com",
+                "tagline": "Breeze through complex data.",
+                "description": "A data visualization dashboard for a climate research institute.",
+                "problem": "Complex weather data needs to be digestible for the general public, not just scientists.",
+                "solution": "Created interactive SVG charts and D3.js integrations that allow users to 'play' with weather models in real-time.",
+                "technologies": [
+                    "D3.js",
+                    "React",
+                    "SVG",
+                    "Node.js"
+                ],
+                "features": [
+                    "Interactive charts",
+                    "Real-time API",
+                    "Data export"
+                ]
+            },
+            {
+                "id": "b6",
+                "image": "/images/web/design4.png",
+                "title": "Origin Brand",
+                "link": "https://originbrand.com",
+                "tagline": "Where good ideas start.",
+                "description": "An e-commerce storefront for sustainable goods.",
+                "problem": "Standard e-commerce templates felt too heavy and generic for a brand focused on sustainability and minimalism.",
+                "solution": "A headless Shopify build using a custom lightweight frontend to reduce carbon footprint via minimized data transfer.",
+                "technologies": [
+                    "Shopify Hydrogen",
+                    "Remix",
+                    "Tailwind",
+                    "Vercel"
+                ],
+                "features": [
+                    "Carbon-conscious code",
+                    "Headless commerce",
+                    "Fast checkout"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "App Development Designs",
+        "gradient": "linear-gradient(to right, #f7b733, #fc4a1a)",
+        "projects": [
+            {
+                "id": "w1",
+                "image": "/images/app/design1.png",
+                "title": "Nexus Platform",
+                "link": "https://nexusplatform.com",
+                "tagline": "Connecting enterprise silos.",
+                "description": "An internal communication tool for Fortune 500 companies.",
+                "technologies": [
+                    "React Native",
+                    "Firebase",
+                    "Redux"
+                ],
+                "problem": "Large organizations suffer from fragmented communication across departments.",
+                "solution": "A unified messaging stream that integrates with existing ERPs to bring alerts and chats into one secure feed."
+            },
+            {
+                "id": "w2",
+                "image": "/images/app/design2.png",
+                "title": "Zeni Finance",
+                "link": "https://zenifinance.com",
+                "tagline": "Your proactive financial companion.",
+                "description": "A next-generation personal finance wallet and budgeting assistant.",
+                "technologies": [
+                    "Flutter",
+                    "Dart",
+                    "Plaid API"
+                ],
+                "problem": "Personal finance management is often reactive and stressful, with users struggling to make sense of scattered transaction data.",
+                "solution": "We created Zeni, an AI-powered financial assistant that proactively identifies savings opportunities and gamifies the budgeting process with 'Savings Challenges'.",
+                "features": [
+                    "AI Spending Insights",
+                    "Gamified Savings",
+                    "Natural Language Search"
+                ]
+            },
+            {
+                "id": "w3",
+                "image": "/images/app/design3.png",
+                "title": "Flow Systems",
+                "link": "https://flowsystems.com",
+                "tagline": "Work without friction.",
+                "description": "Project management software focused on 'flow state'.",
+                "technologies": [
+                    "Electron",
+                    "React",
+                    "Node.js"
+                ],
+                "problem": "PM tools are often cluttered, interrupting deep work.",
+                "solution": "A 'Focus Mode' interface that hides all non-essential UI elements when a timer is running."
+            },
+            {
+                "id": "w4",
+                "image": "/images/app/design4.png",
+                "title": "Code Nest",
+                "link": "https://codenest.com",
+                "tagline": "Nurturing junior developers.",
+                "description": "An educational app with gamified coding challenges.",
+                "technologies": [
+                    "Swift",
+                    "SwiftUI",
+                    "CoreData"
+                ],
+                "problem": "Learning to code on mobile is usually just multiple choice. Users wanted to write actual code.",
+                "solution": "Built a custom syntax-highlighting text editor optimized for touch keyboards."
+            },
+            {
+                "id": "w5",
+                "image": "/images/app/design4.png",
+                "title": "Dev Port",
+                "link": "https://devport.com",
+                "tagline": "Your career, visualized.",
+                "description": "A job seeking platform specifically for developer portfolios.",
+                "technologies": [
+                    "Kotlin",
+                    "Jetpack Compose",
+                    "Android"
+                ],
+                "problem": "Resumes don't show code quality.",
+                "solution": "Integration with GitHub API to visualize contribution graphs and highlight top repositories directly in the application."
+            }
+        ]
+    },
+    {
+        "title": "UI/UX Design",
+        "gradient": "linear-gradient(135deg, #00c6ff, #0072ff)",
+        "projects": [
+            {
+                "id": "u1",
+                "image": "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800",
+                "title": "Crypto Wallet",
+                "tagline": "Secure. Simple. Decentralized.",
+                "description": "A non-custodial wallet design focusing on trust and clarity.",
+                "technologies": [
+                    "Figma",
+                    "Principle",
+                    "After Effects"
+                ],
+                "problem": "Crypto apps are notoriously confusing for new users.",
+                "solution": "We removed technical jargon and used biological/organic shapes to make the interface feel friendly and safe."
+            },
+            {
+                "id": "u2",
+                "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
+                "title": "Social Connect",
+                "tagline": "Bridging physical and digital.",
+                "description": "A social app concept for local meetups.",
+                "technologies": [
+                    "Adobe XD",
+                    "Protopie"
+                ],
+                "problem": "Event apps feel transactional.",
+                "solution": "Focused on 'warm' UI elements and map-based discovery to encourage spontaneous connection."
+            },
+            {
+                "id": "u3",
+                "image": "https://images.unsplash.com/photo-1522542550221-31fd19fe4af0?auto=format&fit=crop&q=80&w=800",
+                "title": "Health Tracker",
+                "tagline": "Your body's dashboard.",
+                "description": "Wellness app focusing on holistic metrics.",
+                "technologies": [
+                    "Figma",
+                    "Blender"
+                ],
+                "problem": "Health data can look like a medical chart, inducing anxiety.",
+                "solution": "Used soft pastels and rounded varying graphs to present health data as a lifestyle narrative rather than a medical report."
+            },
+            {
+                "id": "u4",
+                "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&q=80&w=800",
+                "title": "Finance Dash",
+                "tagline": "Money made clear.",
+                "description": "Fintech dashboard for SME owners.",
+                "technologies": [
+                    "Sketch",
+                    "InVision"
+                ],
+                "problem": "Small business owners are too busy to dig through spreadsheets.",
+                "solution": "A modular dashboard widget system where users can pin their most critical KPIs to the top."
+            },
+            {
+                "id": "u5",
+                "image": "https://images.unsplash.com/photo-1541462608141-ad4d4f942177?auto=format&fit=crop&q=80&w=800",
+                "title": "UX Wireframe",
+                "tagline": "The blueprint of interaction.",
+                "description": "High-fidelity wireframe kit for rapid prototyping.",
+                "technologies": [
+                    "Figma",
+                    "AutoLayout"
+                ],
+                "problem": "Designers spend too much time reinventing basic components.",
+                "solution": "A master component library with 500+ atomic elements."
+            }
+        ]
+    },
+    {
+        "title": "Wordpress Development Designs",
+        "gradient": "linear-gradient(to right, #414345, #232526)",
+        "projects": [
+            {
+                "id": "p1",
+                "image": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?auto=format&fit=crop&q=80&w=800",
+                "title": "Urban Rhythms",
+                "tagline": "City life, cataloged.",
+                "description": "A lifestyle blog for urban explorers.",
+                "technologies": [
+                    "WordPress",
+                    "PHP",
+                    "jQuery"
+                ],
+                "problem": "Heavy blog themes were hurting SEO rankings.",
+                "solution": "A custom lightweight theme stripping away 90% of standard WP bloat for lightning-fast speeds."
+            },
+            {
+                "id": "p2",
+                "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=800",
+                "title": "Natural States",
+                "tagline": "Nature photography portfolio.",
+                "description": "Gallery theme for landscape photographers.",
+                "technologies": [
+                    "WordPress",
+                    "React",
+                    "Rest API"
+                ],
+                "problem": "Standard galleries croppped images incorrectly.",
+                "solution": "An adaptive fullscreen gallery that respects the photographer's original aspect ratios."
+            },
+            {
+                "id": "p3",
+                "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800",
+                "title": "Silent Woods",
+                "tagline": "Retreat to the quiet.",
+                "description": "Booking site for cabin rentals.",
+                "technologies": [
+                    "WordPress",
+                    "WooCommerce"
+                ],
+                "problem": "Booking flows are often stressful and urgent.",
+                "solution": "A calming, slow-paced booking experience with large nature imagery and simplified steps."
+            }
+        ]
+    },
+    {
+        "title": "Saas Development Designs",
+        "gradient": "linear-gradient(135deg, #8e2de2, #4a00e0)",
+        "projects": [
+            {
+                "id": "i1",
+                "image": "https://images.unsplash.com/photo-1618335829737-2228915674e0?auto=format&fit=crop&q=80&w=800",
+                "title": "Digital Flora",
+                "tagline": "Botany for the digital age.",
+                "description": "Plant identification SaaS.",
+                "technologies": [
+                    "Python",
+                    "TensorFlow",
+                    "React"
+                ],
+                "problem": "Identifying plants requires expert knowledge.",
+                "solution": "AI-powered image recognition API that developers can integrate into any app."
+            },
+            {
+                "id": "i2",
+                "image": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=800",
+                "title": "Neon Nights",
+                "tagline": "Nightlife management system.",
+                "description": "POS and reservation system for clubs.",
+                "technologies": [
+                    "Node.js",
+                    "Socket.io",
+                    "React"
+                ],
+                "problem": "Clubs struggling with manual guest lists and capacity tracking.",
+                "solution": "Real-time capacity counting and QR code entry system."
+            },
+            {
+                "id": "i3",
+                "image": "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&q=80&w=800",
+                "title": "Abstract Worlds",
+                "tagline": "VR playground generator.",
+                "description": "Procedural generation tool for VR devs.",
+                "technologies": [
+                    "Unity",
+                    "C#",
+                    "WebGL"
+                ],
+                "problem": "Creating VR assets is time consuming.",
+                "solution": "A web-based generator that creates exportable 3D environments in seconds."
+            }
+        ]
+    },
+    {
+        "title": "Logo Design",
+        "gradient": "linear-gradient(135deg, #f80759, #bc4e9c)",
+        "projects": [
+            {
+                "id": "m1",
+                "image": "/images/logos/design1.png",
+                "title": "3D Sequences",
+                "tagline": "Motion in stillness.",
+                "technologies": [
+                    "Illustrator"
+                ]
+            },
+            {
+                "id": "m2",
+                "image": "/images/logos/design2.png",
+                "title": "Glitch Art",
+                "tagline": "Beauty in error.",
+                "technologies": [
+                    "Photoshop"
+                ]
+            },
+            {
+                "id": "m3",
+                "image": "/images/logos/design3.png",
+                "title": "Tech Loops",
+                "tagline": "Continuous innovation.",
+                "technologies": [
+                    "Figma"
+                ]
+            },
+            {
+                "id": "m4",
+                "image": "/images/logos/design4.png",
+                "title": "Tech Loops",
+                "tagline": "Continuous innovation.",
+                "technologies": [
+                    "Figma"
+                ]
+            },
+            {
+                "id": "m5",
+                "image": "/images/logos/design5.png",
+                "title": "Tech Loops",
+                "tagline": "Continuous innovation.",
+                "technologies": [
+                    "Figma"
+                ]
+            }
+        ]
+    }
+]
