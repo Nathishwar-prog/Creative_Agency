@@ -1,11 +1,11 @@
 [
     {
-        "title": "Web Development Designs",
+        "title": "Web Development",
         "gradient": "linear-gradient(135deg, #e73827, #f85032)",
         "projects": [
             {
                 "id": "b1",
-                "image": "/images/web/design1.png",
+                "image": "/images/web/design1.mp4",
                 "title": "Lumnia Identity",
                 "link": "https://lumnia.com",
                 "tagline": "Illuminating brand presence through digital innovation.",
@@ -26,7 +26,7 @@
             },
             {
                 "id": "b2",
-                "image": "/images/web/design2.png",
+                "image": "/images/web/design2.mp4",
                 "title": "Prism Collective",
                 "link": "https://prismcollective.com",
                 "tagline": "Refracting creativity into digital spectrums.",
@@ -47,7 +47,7 @@
             },
             {
                 "id": "b3",
-                "image": "/images/web/design3.png",
+                "image": "/images/web/design3.mp4",
                 "title": "Vertex Studio",
                 "link": "https://vertexstudio.com",
                 "tagline": "The peak of architectural visualization.",
@@ -68,7 +68,7 @@
             },
             {
                 "id": "b4",
-                "image": "/images/web/design4.png",
+                "image": "/images/web/design4.mp4",
                 "title": "Aura Branding",
                 "link": "https://aurabranding.com",
                 "tagline": "Atmospheric digital experiences.",
@@ -89,7 +89,7 @@
             },
             {
                 "id": "b5",
-                "image": "/images/web/design5.png",
+                "image": "/images/web/design5.mp4",
                 "title": "Zephyr Lab",
                 "link": "https://zephyrlab.com",
                 "tagline": "Breeze through complex data.",
@@ -110,7 +110,70 @@
             },
             {
                 "id": "b6",
-                "image": "/images/web/design4.png",
+                "image": "/images/web/design6.png",
+                "title": "Origin Brand",
+                "link": "https://originbrand.com",
+                "tagline": "Where good ideas start.",
+                "description": "An e-commerce storefront for sustainable goods.",
+                "problem": "Standard e-commerce templates felt too heavy and generic for a brand focused on sustainability and minimalism.",
+                "solution": "A headless Shopify build using a custom lightweight frontend to reduce carbon footprint via minimized data transfer.",
+                "technologies": [
+                    "Shopify Hydrogen",
+                    "Remix",
+                    "Tailwind",
+                    "Vercel"
+                ],
+                "features": [
+                    "Carbon-conscious code",
+                    "Headless commerce",
+                    "Fast checkout"
+                ]
+            },
+            {
+                "id": "b7",
+                "image": "/images/web/design7.png",
+                "title": "Origin Brand",
+                "link": "https://originbrand.com",
+                "tagline": "Where good ideas start.",
+                "description": "An e-commerce storefront for sustainable goods.",
+                "problem": "Standard e-commerce templates felt too heavy and generic for a brand focused on sustainability and minimalism.",
+                "solution": "A headless Shopify build using a custom lightweight frontend to reduce carbon footprint via minimized data transfer.",
+                "technologies": [
+                    "Shopify Hydrogen",
+                    "Remix",
+                    "Tailwind",
+                    "Vercel"
+                ],
+                "features": [
+                    "Carbon-conscious code",
+                    "Headless commerce",
+                    "Fast checkout"
+                ]
+            },
+            {
+                "id": "b8",
+                "image": "/images/web/design8.jpg",
+                "title": "Origin Brand",
+                "link": "https://originbrand.com",
+                "tagline": "Where good ideas start.",
+                "description": "An e-commerce storefront for sustainable goods.",
+                "problem": "Standard e-commerce templates felt too heavy and generic for a brand focused on sustainability and minimalism.",
+                "solution": "A headless Shopify build using a custom lightweight frontend to reduce carbon footprint via minimized data transfer.",
+                "technologies": [
+                    "Shopify Hydrogen",
+                    "Remix",
+                    "Tailwind",
+                    "Vercel"
+                ],
+                "features": [
+                    "Carbon-conscious code",
+                    "Headless commerce",
+                    "Fast checkout"
+                ]
+            },
+            {
+                "id": "b9",
+                "image": "/images/web/design9.webp",
                 "title": "Origin Brand",
                 "link": "https://originbrand.com",
                 "tagline": "Where good ideas start.",
@@ -132,7 +195,7 @@
         ]
     },
     {
-        "title": "App Development Designs",
+        "title": "App Development",
         "gradient": "linear-gradient(to right, #f7b733, #fc4a1a)",
         "projects": [
             {
@@ -223,7 +286,7 @@
         "projects": [
             {
                 "id": "u1",
-                "image": "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800",
+                "image": "/images/ui/ui1.png",
                 "title": "Crypto Wallet",
                 "tagline": "Secure. Simple. Decentralized.",
                 "description": "A non-custodial wallet design focusing on trust and clarity.",
@@ -237,7 +300,7 @@
             },
             {
                 "id": "u2",
-                "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
+                "image": "/images/ui/ui2.png",
                 "title": "Social Connect",
                 "tagline": "Bridging physical and digital.",
                 "description": "A social app concept for local meetups.",
@@ -250,7 +313,7 @@
             },
             {
                 "id": "u3",
-                "image": "https://images.unsplash.com/photo-1522542550221-31fd19fe4af0?auto=format&fit=crop&q=80&w=800",
+                "image": "/images/ui/ui3.png",
                 "title": "Health Tracker",
                 "tagline": "Your body's dashboard.",
                 "description": "Wellness app focusing on holistic metrics.",
@@ -263,7 +326,7 @@
             },
             {
                 "id": "u4",
-                "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&q=80&w=800",
+                "image": "/images/ui/ui4.jpg",
                 "title": "Finance Dash",
                 "tagline": "Money made clear.",
                 "description": "Fintech dashboard for SME owners.",
@@ -276,7 +339,111 @@
             },
             {
                 "id": "u5",
-                "image": "https://images.unsplash.com/photo-1541462608141-ad4d4f942177?auto=format&fit=crop&q=80&w=800",
+                "image": "/images/ui/ui5.jpg",
+                "title": "UX Wireframe",
+                "tagline": "The blueprint of interaction.",
+                "description": "High-fidelity wireframe kit for rapid prototyping.",
+                "technologies": [
+                    "Figma",
+                    "AutoLayout"
+                ],
+                "problem": "Designers spend too much time reinventing basic components.",
+                "solution": "A master component library with 500+ atomic elements."
+            },
+            {
+                "id": "u6",
+                "image": "/images/ui/ui6.jpg",
+                "title": "UX Wireframe",
+                "tagline": "The blueprint of interaction.",
+                "description": "High-fidelity wireframe kit for rapid prototyping.",
+                "technologies": [
+                    "Figma",
+                    "AutoLayout"
+                ],
+                "problem": "Designers spend too much time reinventing basic components.",
+                "solution": "A master component library with 500+ atomic elements."
+            },
+            {
+                "id": "u7",
+                "image": "/images/ui/ui7.png",
+                "title": "UX Wireframe",
+                "tagline": "The blueprint of interaction.",
+                "description": "High-fidelity wireframe kit for rapid prototyping.",
+                "technologies": [
+                    "Figma",
+                    "AutoLayout"
+                ],
+                "problem": "Designers spend too much time reinventing basic components.",
+                "solution": "A master component library with 500+ atomic elements."
+            },
+            {
+                "id": "u8",
+                "image": "/images/ui/ui8.jpg",
+                "title": "UX Wireframe",
+                "tagline": "The blueprint of interaction.",
+                "description": "High-fidelity wireframe kit for rapid prototyping.",
+                "technologies": [
+                    "Figma",
+                    "AutoLayout"
+                ],
+                "problem": "Designers spend too much time reinventing basic components.",
+                "solution": "A master component library with 500+ atomic elements."
+            },
+            {
+                "id": "u9",
+                "image": "/images/ui/ui9.jpg",
+                "title": "UX Wireframe",
+                "tagline": "The blueprint of interaction.",
+                "description": "High-fidelity wireframe kit for rapid prototyping.",
+                "technologies": [
+                    "Figma",
+                    "AutoLayout"
+                ],
+                "problem": "Designers spend too much time reinventing basic components.",
+                "solution": "A master component library with 500+ atomic elements."
+            },
+            {
+                "id": "u10",
+                "image": "/images/ui/ui10.png",
+                "title": "UX Wireframe",
+                "tagline": "The blueprint of interaction.",
+                "description": "High-fidelity wireframe kit for rapid prototyping.",
+                "technologies": [
+                    "Figma",
+                    "AutoLayout"
+                ],
+                "problem": "Designers spend too much time reinventing basic components.",
+                "solution": "A master component library with 500+ atomic elements."
+            },
+            {
+                "id": "u11",
+                "image": "/images/ui/ui11.jpg",
+                "title": "UX Wireframe",
+                "tagline": "The blueprint of interaction.",
+                "description": "High-fidelity wireframe kit for rapid prototyping.",
+                "technologies": [
+                    "Figma",
+                    "AutoLayout"
+                ],
+                "problem": "Designers spend too much time reinventing basic components.",
+                "solution": "A master component library with 500+ atomic elements."
+            },
+            {
+                "id": "u12",
+                "image": "/images/ui/ui12.jpg",
+                "title": "UX Wireframe",
+                "tagline": "The blueprint of interaction.",
+                "description": "High-fidelity wireframe kit for rapid prototyping.",
+                "technologies": [
+                    "Figma",
+                    "AutoLayout"
+                ],
+                "problem": "Designers spend too much time reinventing basic components.",
+                "solution": "A master component library with 500+ atomic elements."
+            },
+            {
+                "id": "u13",
+                "image": "/images/ui/ui13.jpg",
                 "title": "UX Wireframe",
                 "tagline": "The blueprint of interaction.",
                 "description": "High-fidelity wireframe kit for rapid prototyping.",
@@ -290,12 +457,12 @@
         ]
     },
     {
-        "title": "Wordpress Development Designs",
+        "title": "Branding Samples",
         "gradient": "linear-gradient(to right, #414345, #232526)",
         "projects": [
             {
                 "id": "p1",
-                "image": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?auto=format&fit=crop&q=80&w=800",
+                "image": "/images/branding/design1.mp4",
                 "title": "Urban Rhythms",
                 "tagline": "City life, cataloged.",
                 "description": "A lifestyle blog for urban explorers.",
@@ -309,7 +476,7 @@
             },
             {
                 "id": "p2",
-                "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=800",
+                "image": "/images/branding/mani.mp4",
                 "title": "Natural States",
                 "tagline": "Nature photography portfolio.",
                 "description": "Gallery theme for landscape photographers.",
@@ -323,7 +490,7 @@
             },
             {
                 "id": "p3",
-                "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800",
+                "image": "/images/branding/design3.mp4",
                 "title": "Silent Woods",
                 "tagline": "Retreat to the quiet.",
                 "description": "Booking site for cabin rentals.",
@@ -427,6 +594,51 @@
             {
                 "id": "m5",
                 "image": "/images/logos/design5.png",
+                "title": "Tech Loops",
+                "tagline": "Continuous innovation.",
+                "technologies": [
+                    "Figma"
+                ]
+            },
+            {
+                "id": "m6",
+                "image": "/images/logos/design6.png",
+                "title": "Tech Loops",
+                "tagline": "Continuous innovation.",
+                "technologies": [
+                    "Figma"
+                ]
+            },
+            {
+                "id": "m7",
+                "image": "/images/logos/design7.mp4",
+                "title": "Tech Loops",
+                "tagline": "Continuous innovation.",
+                "technologies": [
+                    "Figma"
+                ]
+            },
+            {
+                "id": "m8",
+                "image": "/images/logos/design8.mp4",
+                "title": "Tech Loops",
+                "tagline": "Continuous innovation.",
+                "technologies": [
+                    "Figma"
+                ]
+            },
+            {
+                "id": "m9",
+                "image": "/images/logos/design9.png",
+                "title": "Tech Loops",
+                "tagline": "Continuous innovation.",
+                "technologies": [
+                    "Figma"
+                ]
+            },
+            {
+                "id": "m10",
+                "image": "/images/logos/design10.png",
                 "title": "Tech Loops",
                 "tagline": "Continuous innovation.",
                 "technologies": [

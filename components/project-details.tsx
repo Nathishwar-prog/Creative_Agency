@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { X, ExternalLink, Github, Layers, ArrowRight, Maximize2 } from "lucide-react";
+import { X, ExternalLink, Github, Layers, ArrowRight, Maximize2, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import type { Project } from "./3d-folder";
@@ -10,6 +10,10 @@ interface ProjectDetailsProps {
     isOpen: boolean;
     onClose: () => void;
     project: Project | null;
+    onNext?: () => void;
+    onPrev?: () => void;
+    hasNext?: boolean;
+    hasPrev?: boolean;
 }
 
 // Extend the Project interface locally if needed, or rely on type assertion for new fields
@@ -23,7 +27,7 @@ interface RichProject extends Project {
     features?: string[];
 }
 
-export function ProjectDetails({ isOpen, onClose, project }: ProjectDetailsProps) {
+export function ProjectDetails({ isOpen, onClose, project, onNext, onPrev, hasNext, hasPrev }: ProjectDetailsProps) {
     const data = project as RichProject;
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [isFullView, setIsFullView] = useState(false);
@@ -46,6 +50,18 @@ export function ProjectDetails({ isOpen, onClose, project }: ProjectDetailsProps
             scrollContainerRef.current.scrollTop = 0;
         }
     }, [isOpen, project]);
+
+    // Keyboard navigation
+    useEffect(() => {
+        if (!isOpen) return;
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "ArrowRight" && hasNext && onNext) onNext();
+            if (e.key === "ArrowLeft" && hasPrev && onPrev) onPrev();
+            if (e.key === "Escape") onClose();
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [isOpen, hasNext, hasPrev, onNext, onPrev, onClose]);
 
     if (!data) return null;
 
@@ -81,16 +97,48 @@ export function ProjectDetails({ isOpen, onClose, project }: ProjectDetailsProps
                             <X size={20} />
                         </button>
 
+                        {/* Navigation Buttons */}
+                        {hasPrev && (
+                            <button
+                                onClick={(e) => { e.stopPropagation(); onPrev?.(); }}
+                                className="absolute left-4 top-1/2 -translate-y-1/2 z-50 p-2 rounded-full bg-black/20 hover:bg-black/40 text-white backdrop-blur-md transition-all border border-white/10 hidden md:flex"
+                            >
+                                <ChevronLeft size={24} />
+                            </button>
+                        )}
+                        {hasNext && (
+                            <button
+                                onClick={(e) => { e.stopPropagation(); onNext?.(); }}
+                                className="absolute right-4 top-1/2 -translate-y-1/2 z-50 p-2 rounded-full bg-black/20 hover:bg-black/40 text-white backdrop-blur-md transition-all border border-white/10 hidden md:flex"
+                            >
+                                <ChevronRight size={24} />
+                            </button>
+                        )}
+
                         {/* --- LEFT: Image / Media Section --- */}
                         <div className="w-full md:w-5/12 lg:w-1/2 relative bg-zinc-900 overflow-hidden h-64 md:h-auto">
-                            <motion.img
-                                initial={{ scale: 1.1 }}
-                                animate={{ scale: 1 }}
-                                transition={{ duration: 10, repeat: Infinity, repeatType: "mirror", ease: "linear" }}
-                                src={data.image || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200"}
-                                alt={data.title}
-                                className="absolute inset-0 w-full h-full object-cover opacity-80"
-                            />
+                            {data.image?.endsWith('.mp4') ? (
+                                <motion.video
+                                    src={data.image}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    initial={{ scale: 1.1 }}
+                                    animate={{ scale: 1 }}
+                                    transition={{ duration: 10, repeat: Infinity, repeatType: "mirror", ease: "linear" }}
+                                    className="absolute inset-0 w-full h-full object-cover opacity-80"
+                                />
+                            ) : (
+                                <motion.img
+                                    initial={{ scale: 1.1 }}
+                                    animate={{ scale: 1 }}
+                                    transition={{ duration: 10, repeat: Infinity, repeatType: "mirror", ease: "linear" }}
+                                    src={data.image || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200"}
+                                    alt={data.title}
+                                    className="absolute inset-0 w-full h-full object-cover opacity-80"
+                                />
+                            )}
                             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-background" />
 
                             {/* Floating Tech Badges (Mobile/Tablet view mostly, or overlay) */}
@@ -231,15 +279,31 @@ export function ProjectDetails({ isOpen, onClose, project }: ProjectDetailsProps
                     </button>
 
                     <div className="min-h-full w-full flex items-start justify-center p-4 md:p-10">
-                        <motion.img
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                            src={data.image || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200"}
-                            alt={data.title}
-                            className="w-auto h-auto max-w-full rounded-lg shadow-2xl"
-                            onClick={(e) => e.stopPropagation()}
-                        />
+                        {data.image?.endsWith('.mp4') ? (
+                            <motion.video
+                                initial={{ scale: 0.9, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                                src={data.image}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                controls
+                                className="w-auto h-auto max-w-full rounded-lg shadow-2xl"
+                                onClick={(e) => e.stopPropagation()}
+                            />
+                        ) : (
+                            <motion.img
+                                initial={{ scale: 0.9, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                                src={data.image || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200"}
+                                alt={data.title}
+                                className="w-auto h-auto max-w-full rounded-lg shadow-2xl"
+                                onClick={(e) => e.stopPropagation()}
+                            />
+                        )}
                     </div>
                 </motion.div>
             )}

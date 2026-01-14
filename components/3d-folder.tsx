@@ -86,14 +86,25 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
           "transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
           "group-hover/card:-translate-y-6 group-hover/card:shadow-2xl group-hover/card:shadow-accent/40 group-hover/card:ring-2 group-hover/card:ring-accent group-hover/card:scale-125"
         )}>
-          <img
-            src={image || PLACEHOLDER_IMAGE}
-            alt={title}
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE;
-            }}
-          />
+          {image?.endsWith('.mp4') ? (
+            <video
+              src={image}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <img
+              src={image || PLACEHOLDER_IMAGE}
+              alt={title}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE;
+              }}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
           <p className="absolute bottom-1.5 left-1.5 right-1.5 text-[9px] font-black uppercase tracking-tighter text-white truncate drop-shadow-md">
             {title}
@@ -322,12 +333,23 @@ const ImageLightbox: React.FC<ImageLightboxProps> = React.memo(({
             >
               {projects.map((project, idx) => (
                 <div key={project.id} className="min-w-full h-full relative">
-                  <img
-                    src={project.image || PLACEHOLDER_IMAGE}
-                    alt={project.title}
-                    className="w-full h-full object-cover select-none"
-                    onError={(e) => { (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE; }}
-                  />
+                  {project.image?.endsWith('.mp4') ? (
+                    <video
+                      src={project.image}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-full object-cover select-none"
+                    />
+                  ) : (
+                    <img
+                      src={project.image || PLACEHOLDER_IMAGE}
+                      alt={project.title}
+                      className="w-full h-full object-cover select-none"
+                      onError={(e) => { (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE; }}
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
                 </div>
               ))}
@@ -384,6 +406,18 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = React.memo(({ title, proje
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const previewProjects = projects.slice(0, 5);
+  // Find index in the FULL projects list
+  const selectedIndex = selectedProject ? projects.findIndex(p => p.id === selectedProject.id) : -1;
+  const hasNext = selectedIndex < projects.length - 1;
+  const hasPrev = selectedIndex > 0;
+
+  const handleNext = () => {
+    if (hasNext) setSelectedProject(projects[selectedIndex + 1]);
+  };
+
+  const handlePrev = () => {
+    if (hasPrev) setSelectedProject(projects[selectedIndex - 1]);
+  };
 
   const handleProjectClick = (project: Project, index: number) => {
     setSelectedProject(project);
@@ -444,6 +478,10 @@ const AnimatedFolder: React.FC<AnimatedFolderProps> = React.memo(({ title, proje
         isOpen={isDetailsOpen}
         onClose={handleCloseDetails}
         project={selectedProject}
+        onNext={handleNext}
+        onPrev={handlePrev}
+        hasNext={hasNext}
+        hasPrev={hasPrev}
       />
     </>
   );
