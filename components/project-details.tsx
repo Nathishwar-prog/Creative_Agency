@@ -85,7 +85,7 @@ export function ProjectDetails({ isOpen, onClose, project, onNext, onPrev, hasNe
                         initial={{ y: "20px", opacity: 0, scale: 0.95 }}
                         animate={{ y: "0px", opacity: 1, scale: 1 }}
                         exit={{ y: "20px", opacity: 0, scale: 0.95 }}
-                        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                         className="relative w-full max-w-6xl h-full max-h-[90vh] bg-card border border-border shadow-2xl rounded-3xl overflow-hidden flex flex-col md:flex-row"
                         onClick={(e) => e.stopPropagation()}
                     >
@@ -283,7 +283,7 @@ export function ProjectDetails({ isOpen, onClose, project, onNext, onPrev, hasNe
                             <motion.video
                                 initial={{ scale: 0.9, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
-                                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                                 src={data.image}
                                 autoPlay
                                 muted
@@ -297,7 +297,7 @@ export function ProjectDetails({ isOpen, onClose, project, onNext, onPrev, hasNe
                             <motion.img
                                 initial={{ scale: 0.9, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
-                                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                                 src={data.image || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200"}
                                 alt={data.title}
                                 className="w-auto h-auto max-w-full rounded-lg shadow-2xl"

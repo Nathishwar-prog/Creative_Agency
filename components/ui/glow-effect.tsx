@@ -1,27 +1,27 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { motion, Transition } from 'motion/react';
+import { motion, Transition } from 'framer-motion';
 
 export type GlowEffectProps = {
   className?: string;
   style?: React.CSSProperties;
   colors?: string[];
   mode?:
-    | 'rotate'
-    | 'pulse'
-    | 'breathe'
-    | 'colorShift'
-    | 'flowHorizontal'
-    | 'static';
+  | 'rotate'
+  | 'pulse'
+  | 'breathe'
+  | 'colorShift'
+  | 'flowHorizontal'
+  | 'static';
   blur?:
-    | number
-    | 'softest'
-    | 'soft'
-    | 'medium'
-    | 'strong'
-    | 'stronger'
-    | 'strongest'
-    | 'none';
+  | number
+  | 'softest'
+  | 'soft'
+  | 'medium'
+  | 'strong'
+  | 'stronger'
+  | 'strongest'
+  | 'none';
   transition?: Transition;
   scale?: number;
   duration?: number;
@@ -37,7 +37,7 @@ export function GlowEffect({
   scale = 1,
   duration = 5,
 }: GlowEffectProps) {
-  const BASE_TRANSITION = {
+  const BASE_TRANSITION: Transition = {
     repeat: Infinity,
     duration: duration,
     ease: 'linear',

@@ -2,7 +2,7 @@
 
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import {
   ArrowRight,
   Check,
@@ -34,7 +34,7 @@ const TRUST_POINTS = [
 
 // --- Animation Variants ---
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -45,7 +45,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { y: 20, opacity: 0, filter: 'blur(10px)' },
   visible: {
     y: 0,
@@ -55,7 +55,7 @@ const itemVariants = {
   }
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, x: 100, rotateY: -15, scale: 0.95 },
   visible: {
     opacity: 1,
@@ -116,7 +116,7 @@ const BackgroundEffects = () => (
   </div>
 );
 
-const ProgressBar = ({ currentStep, totalSteps }) => {
+const ProgressBar = ({ currentStep, totalSteps }: { currentStep: number; totalSteps: number }) => {
   const progress = ((currentStep + 1) / totalSteps) * 100;
 
   return (
@@ -125,7 +125,7 @@ const ProgressBar = ({ currentStep, totalSteps }) => {
         className="h-full bg-white shadow-[0_0_15px_rgba(255,255,255,0.8)]"
         initial={{ width: 0 }}
         animate={{ width: `${progress}%` }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
       />
     </div>
   );
@@ -146,7 +146,7 @@ export default function ContactSection() {
   const [focusedInput, setFocusedInput] = useState(false);
 
   // Handlers
-  const handleOptionSelect = (id) => {
+  const handleOptionSelect = (id: string) => {
     setFormData(prev => ({ ...prev, projectType: id }));
     setTimeout(() => setStep(1), 400);
   };
@@ -182,7 +182,7 @@ export default function ContactSection() {
     setIsSuccess(false);
   };
 
-  const isValidEmail = (email) => {
+  const isValidEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
@@ -318,7 +318,7 @@ export default function ContactSection() {
                         initial={{ opacity: 0, x: 50, filter: 'blur(5px)' }}
                         animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
                         exit={{ opacity: 0, x: -50, filter: 'blur(5px)' }}
-                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                       >
                         <h2 className="text-3xl font-bold mb-2 text-white">The Goal.</h2>
                         <p className="text-zinc-500 mb-8">What are we building?</p>
@@ -358,7 +358,7 @@ export default function ContactSection() {
                         initial={{ opacity: 0, x: 50, filter: 'blur(5px)' }}
                         animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
                         exit={{ opacity: 0, x: -50, filter: 'blur(5px)' }}
-                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                         className="space-y-8"
                       >
                         <div>
@@ -411,7 +411,7 @@ export default function ContactSection() {
                         initial={{ opacity: 0, x: 50, filter: 'blur(5px)' }}
                         animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
                         exit={{ opacity: 0, x: -50, filter: 'blur(5px)' }}
-                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                         className="space-y-8"
                       >
                         <div>

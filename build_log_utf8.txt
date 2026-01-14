@@ -1,0 +1,193 @@
+﻿
+> agency@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.1 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 6.3s
+  Running TypeScript ...
+node.exe : Failed to 
+compile.
+At C:\Program Files\n
+odejs\npm.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Failed    
+ to compile.:Stri    
+ng) [], RemoteEx    
+ception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+
+./components/ui/glow-
+effect.tsx:142:7
+Type error: Type '{ 
+background: 
+string[]; 
+transition: { 
+isSync?: boolean | 
+undefined; delay?: 
+number | undefined; 
+elapsed?: number | 
+undefined; driver?: 
+Driver | undefined; 
+type?: AnimationGener
+atorType | 
+undefined; ... 32 
+more ...; onStop?: 
+(() => void) | 
+undefined; } | { 
+...; }; } | ... 4 
+more ... | { ...; }' 
+is not assignable to 
+type 'boolean | 
+TargetAndTransition 
+| VariantLabels | Leg
+acyAnimationControls 
+| undefined'.
+  Type '{ 
+background: 
+string[]; 
+transition: { 
+isSync?: boolean; 
+delay?: number; 
+elapsed?: number; 
+driver?: Driver; 
+type?: AnimationGener
+atorType; ... 32 
+more ...; onStop?: 
+() => void; } | { 
+...; }; }' is not 
+assignable to type 
+'boolean | 
+TargetAndTransition 
+| VariantLabels | Leg
+acyAnimationControls 
+| undefined'.
+    Type '{ 
+background: 
+string[]; 
+transition: { 
+isSync?: boolean; 
+delay?: number; 
+elapsed?: number; 
+driver?: Driver; 
+type?: AnimationGener
+atorType; ... 32 
+more ...; onStop?: 
+() => void; } | { 
+...; }; }' is not 
+assignable to type 'T
+argetAndTransition'.
+      Type '{ 
+background: 
+string[]; 
+transition: { 
+isSync?: boolean; 
+delay?: number; 
+elapsed?: number; 
+driver?: Driver; 
+type?: AnimationGener
+atorType; ... 32 
+more ...; onStop?: 
+() => void; } | { 
+...; }; }' is not 
+assignable to type 
+'{ transition?: 
+Transition<any> | 
+undefined; 
+transitionEnd?: 
+ResolvedValues | 
+undefined; }'.
+        Types of 
+property 
+'transition' are 
+incompatible.
+          Type '{ 
+isSync?: boolean | 
+undefined; delay?: 
+number | undefined; 
+elapsed?: number | 
+undefined; driver?: 
+Driver | undefined; 
+type?: AnimationGener
+atorType | 
+undefined; ... 32 
+more ...; onStop?: 
+(() => void) | 
+undefined; } | { 
+...; }' is not 
+assignable to type 
+'Transition<any> | 
+undefined'.
+            Type '{ 
+repeat: number; 
+duration: number; 
+ease: string; }' is 
+not assignable to 
+type 
+'Transition<any> | 
+undefined'.
+              Type 
+'{ repeat: number; 
+duration: number; 
+ease: string; }' is 
+not assignable to 
+type 'TransitionWithV
+alueOverrides<any>'.
+                Type 
+'{ repeat: number; 
+duration: number; 
+ease: string; }' is 
+not assignable to 
+type 'ValueAnimationT
+ransition<any>'.
+                  
+Types of property 
+'ease' are 
+incompatible.
+                    
+Type 'string' is not 
+assignable to type 
+'Easing | Easing[] | 
+undefined'.
+
+[0m [90m 140 
+|[39m         } 
+[36mas[39m [33mRea
+ct[39m[33m.[39m[3
+3mCSSProperties[39m
+ [90m 141 |[39m    
+   }
+[31m[1m>[22m[39m
+[90m 142 |[39m      
+ animate[33m=[39m{a
+nimations[mode]}
+ [90m     |[39m    
+   
+[31m[1m^[22m[39m
+ [90m 143 |[39m    
+   className[33m=[3
+9m{cn(
+ [90m 144 |[39m    
+     [32m'pointer-ev
+ents-none absolute 
+inset-0 h-full w-full
+'[39m[33m,[39m
+ [90m 145 |[39m    
+     [32m'scale-[var
+(--scale)] transform-
+gpu'[39m[33m,[39m
+[0m
+Next.js build worker 
+exited with code: 1 
+and signal: null

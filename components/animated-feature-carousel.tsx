@@ -158,7 +158,7 @@ function useNumberCycler(totalSteps: number = TOTAL_STEPS, interval: number = 50
   // When called, it updates `currentNumber`, which will trigger the useEffect
   // to reset the timer for the next cycle.
   const setStep = useCallback((stepIndex: number) => {
-      setCurrentNumber(stepIndex % totalSteps);
+    setCurrentNumber(stepIndex % totalSteps);
   }, [totalSteps]);
 
   return { currentNumber, setStep };
@@ -241,28 +241,28 @@ function FeatureCard({ children, step }: { children: React.ReactNode; step: numb
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
             >
               <motion.div
                 className="text-sm font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-500"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.05, duration: 0.3, ease: [0.22, 1, 0.36, 1]}}
+                transition={{ delay: 0.05, duration: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
               >
-                  {steps[step].name}
+                {steps[step].name}
               </motion.div>
               <motion.h2
                 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1, duration: 0.3, ease: [0.22, 1, 0.36, 1]}}
+                transition={{ delay: 0.1, duration: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
               >
                 {steps[step].title}
               </motion.h2>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.15, duration: 0.3, ease: [0.22, 1, 0.36, 1]}}
+                transition={{ delay: 0.15, duration: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
               >
                 <p className="text-base leading-relaxed text-neutral-700 dark:text-neutral-400">
                   {steps[step].description}
@@ -278,46 +278,46 @@ function FeatureCard({ children, step }: { children: React.ReactNode; step: numb
 }
 
 function StepsNav({ steps: stepItems, current, onChange }: { steps: readonly Step[]; current: number; onChange: (index: number) => void; }) {
-    return (
-        <nav aria-label="Progress" className="flex justify-center px-4">
-            <ol className="flex w-full flex-wrap items-center justify-center gap-2" role="list">
-                {stepItems.map((step, stepIdx) => {
-                    const isCompleted = current > stepIdx;
-                    const isCurrent = current === stepIdx;
-                    return (
-                        <motion.li key={step.name} initial="inactive" animate={isCurrent ? "active" : "inactive"} variants={stepVariants} transition={{ duration: 0.3 }} className="relative" >
-                            <button
-                                type="button"
-                                className={cn(
-                                    "group flex items-center gap-2.5 rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500 dark:focus-visible:ring-offset-black",
-                                    isCurrent 
-                                        ? "bg-sky-600 text-white dark:bg-sky-500" 
-                                        : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700"
-                                )}
-                                onClick={() => onChange(stepIdx)}
-                            >
-                                <span className={cn(
-                                    "flex h-5 w-5 shrink-0 items-center justify-center rounded-full transition-all duration-300",
-                                    isCompleted 
-                                        ? "bg-sky-600 text-white dark:bg-sky-500" 
-                                        : isCurrent 
-                                            ? "bg-sky-400 text-sky-900 dark:bg-sky-400 dark:text-sky-900" 
-                                            : "bg-neutral-200 text-neutral-700 group-hover:bg-neutral-300 dark:bg-neutral-700 dark:text-neutral-200 dark:group-hover:bg-neutral-600"
-                                )}>
-                                    {isCompleted ? (
-                                        <IconCheck className="h-3.5 w-3.5" />
-                                    ) : (
-                                        <span>{stepIdx + 1}</span>
-                                    )}
-                                </span>
-                                <span className="hidden sm:inline-block">{step.name}</span>
-                            </button>
-                        </motion.li>
-                    );
-                })}
-            </ol>
-        </nav>
-    );
+  return (
+    <nav aria-label="Progress" className="flex justify-center px-4">
+      <ol className="flex w-full flex-wrap items-center justify-center gap-2" role="list">
+        {stepItems.map((step, stepIdx) => {
+          const isCompleted = current > stepIdx;
+          const isCurrent = current === stepIdx;
+          return (
+            <motion.li key={step.name} initial="inactive" animate={isCurrent ? "active" : "inactive"} variants={stepVariants} transition={{ duration: 0.3 }} className="relative" >
+              <button
+                type="button"
+                className={cn(
+                  "group flex items-center gap-2.5 rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500 dark:focus-visible:ring-offset-black",
+                  isCurrent
+                    ? "bg-sky-600 text-white dark:bg-sky-500"
+                    : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700"
+                )}
+                onClick={() => onChange(stepIdx)}
+              >
+                <span className={cn(
+                  "flex h-5 w-5 shrink-0 items-center justify-center rounded-full transition-all duration-300",
+                  isCompleted
+                    ? "bg-sky-600 text-white dark:bg-sky-500"
+                    : isCurrent
+                      ? "bg-sky-400 text-sky-900 dark:bg-sky-400 dark:text-sky-900"
+                      : "bg-neutral-200 text-neutral-700 group-hover:bg-neutral-300 dark:bg-neutral-700 dark:text-neutral-200 dark:group-hover:bg-neutral-600"
+                )}>
+                  {isCompleted ? (
+                    <IconCheck className="h-3.5 w-3.5" />
+                  ) : (
+                    <span>{stepIdx + 1}</span>
+                  )}
+                </span>
+                <span className="hidden sm:inline-block">{step.name}</span>
+              </button>
+            </motion.li>
+          );
+        })}
+      </ol>
+    </nav>
+  );
 }
 
 const defaultClasses = {
@@ -366,16 +366,16 @@ export function FeatureCarousel({
   }
   return (
     <div className="flex flex-col gap-12 w-full max-w-4xl mx-auto p-4">
-        <FeatureCard {...props} step={step}>
-            <AnimatePresence mode="wait">
-                <motion.div key={step} {...ANIMATION_PRESETS.fadeInScale} className="w-full h-full absolute">
-                    {renderStepContent()}
-                </motion.div>
-            </AnimatePresence>
-        </FeatureCard>
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-            <StepsNav current={step} onChange={setStep} steps={steps} />
-        </motion.div>
+      <FeatureCard {...props} step={step}>
+        <AnimatePresence mode="wait">
+          <motion.div key={step} {...ANIMATION_PRESETS.fadeInScale} className="w-full h-full absolute">
+            {renderStepContent()}
+          </motion.div>
+        </AnimatePresence>
+      </FeatureCard>
+      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+        <StepsNav current={step} onChange={setStep} steps={steps} />
+      </motion.div>
     </div>
   )
 }

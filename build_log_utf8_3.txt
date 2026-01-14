@@ -1,0 +1,70 @@
+﻿
+> agency@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.1 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 6.2s
+  Running TypeScript ...
+node.exe : Failed to 
+compile.
+At C:\Program Files\n
+odejs\npm.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Failed    
+ to compile.:Stri    
+ng) [], RemoteEx    
+ception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+
+./components/ui/verti
+cal-cut-reveal.tsx:12
+:10
+Type error: 
+'"framer-motion"' 
+has no exported 
+member named 'Dynamic
+AnimationOptions'. 
+Did you mean 
+'AnimationOptions'?
+
+[0m [90m 10 |[39m 
+  useState[33m,[39m
+ [90m 11 |[39m } 
+[36mfrom[39m 
+[32m"react"[39m
+[31m[1m>[22m[39m
+[90m 12 |[39m 
+[36mimport[39m { [
+33mDynamicAnimationOp
+tions[39m[33m,[39m
+ motion } 
+[36mfrom[39m [32m"
+framer-motion"[39m
+ [90m    |[39m     
+     
+[31m[1m^[22m[39m
+ [90m 13 |[39m 
+[36mimport[39m { 
+cn } [36mfrom[39m 
+[32m"@/lib/utils"[39
+m
+ [90m 14 |[39m
+ [90m 15 |[39m 
+[36minterface[39m 
+[33mTextProps[39m 
+{[0m
+Next.js build worker 
+exited with code: 1 
+and signal: null
